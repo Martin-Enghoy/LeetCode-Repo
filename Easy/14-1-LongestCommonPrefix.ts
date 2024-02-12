@@ -14,21 +14,6 @@ function longestCommonPrefix(strs: string[]): string {
   // Sort by length in ascending / Smallest length will be first
   comp.sort((a, b) => a.length - b.length);
 
-  // Assign shortest word length to counter
-  // for (let i = 0; i < comp.length; i++) {
-  //     if (shlen > comp[i].length) {
-  //         shlen = comp[i].length
-  //     }
-  // }
-
-  // Sort
-
-  // Compare strings
-  // for (let i = 0; i < shlen; i++) {
-  //     for (let y = 0; y < comp.length-1; y++) {
-
-  //     }
-  // }
   for (let i = 0; i < comp[0].length; i++) {
     let char: string = comp[0][i];
     for (let y = 1; y < comp.length; y++) {
