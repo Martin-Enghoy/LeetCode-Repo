@@ -1,4 +1,4 @@
-function strStr(haystack: string, needle: string): number {
+function strStrToo(haystack: string, needle: string): number {
   let start: number = 0;
   let end: number = needle.length;
 
