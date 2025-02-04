@@ -39,3 +39,24 @@ function increasingTriplet(nums: number[]): boolean {
 
     return ans;
 }
+
+// Better solution
+function incTriplet(nums: number[]): boolean {
+    let left = Number.MAX_VALUE;
+    let right = Number.MAX_VALUE;
+
+    for (const element of nums) {
+        let curr = element;
+        if (curr <= left) {
+            left = curr;
+            continue;
+        }
+        if (curr <= right) {
+            right = curr;
+            continue;
+        }
+        return true;
+    }
+
+    return false;
+}
