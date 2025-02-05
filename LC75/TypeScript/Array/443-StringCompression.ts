@@ -26,18 +26,19 @@ function compress(chars: string[]): number {
         console.log('curr ', curr);
         console.log('prev ', prev);
         console.log('ans ', s);
-        if (!prev) {
+        console.log('ctr ', ctr);
+        if (prev === '') {
             s = s + curr;
             prev = curr;
             continue;
         }
 
         if (curr !== prev) {
-            s = s + curr;
             if (ctr > 1) {
                 s = s + ctr.toString();
                 ctr = 1;
             }
+            s = s + curr;
         } else {
             ctr++;
         }
@@ -51,4 +52,4 @@ function compress(chars: string[]): number {
     console.log(s);
 
     return s.length;
-};
+}
