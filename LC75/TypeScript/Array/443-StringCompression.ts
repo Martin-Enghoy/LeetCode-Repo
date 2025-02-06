@@ -53,3 +53,32 @@ function compress(chars: string[]): number {
 
     return s.length;
 }
+
+function finalCompress(chars: string[]): number {
+    let index = 0;
+    let i = 0;
+
+    if (chars.length <= 1) {
+        return chars.length;
+    }
+
+    while (i < chars.length) {
+        let j = i;
+        while (j < chars.length && chars[j] === chars[i]) {
+            j++;
+        }
+
+        // push unique letter
+        chars[index++] = chars[i];
+        if (j - i > 1) {
+            const ctr = j - i;
+            for (const numberChar of ctr.toString()) {
+                chars[index++] = numberChar;
+            }
+        }
+
+        i = j;
+    }
+
+    return index;
+};
