@@ -1,0 +1,14 @@
+{
+  "name": "leetcode-repo",
+  "version": "1.0.0",
+  "description": "This is Martin's Personal LeetCode Repo for storing all coding interview-esk code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.13.1"
+  }
+}

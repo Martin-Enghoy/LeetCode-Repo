@@ -30,3 +30,27 @@ function InitialCanPlaceFlowers(flowerbed: number[], n: number): boolean {
 
   return false;
 }
+
+function canPlaceFlowersFinal(flowerbed: number[], n: number): boolean {
+  let curr = 0;
+  let flowers = n;
+
+  if (n === 0) {
+    return true;
+  }
+
+  while (curr < flowerbed.length) {
+    if (flowerbed[curr-1] !== 1 && flowerbed[curr+1] !== 1 && flowerbed[curr] === 0) {
+      flowerbed[curr] = 1;
+      flowers--;
+    }
+
+    if (flowers === 0) {
+      return true;
+    }
+
+    curr++;
+  }
+
+  return false;
+}
