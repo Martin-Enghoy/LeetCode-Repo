@@ -40,4 +40,26 @@ function maxOperations(nums: number[], k: number): number {
     }
 
     return pairs;
-};
+}
+
+function maxOperationsFinal(nums: number[], k: number): number {
+    nums.sort((a,b) => a-b);
+    let pairs = 0;
+    let i = 0;
+    let j = nums.length - 1;
+
+    while (i < j) {
+        const sum = nums[i] + nums[j];
+        if (sum === k) {
+            i++;
+            j--;
+            pairs++;
+        } else if (sum > k) {
+            j--;
+        } else {
+            i++;
+        }
+    }
+
+    return pairs;
+}
