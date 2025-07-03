@@ -9,7 +9,7 @@ function toInt(char) {
   const asciiOfChar = lowerChar.charCodeAt(0);
 
   // Calculate the integer equivalent (e.g., 'a' - 'a' + 1 = 1)
-  return asciiOfChar - asciiOfA + 1;;
+  return asciiOfChar - asciiOfA + 1;
 }
 
 function kthCharacter(k) {
